@@ -1,0 +1,102 @@
+
+
+.botonesRedireccion {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1c1c1c, #2b2b2b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+button {
+    position: relative;
+    width: 260px;
+    height: 80px;
+    background: #121212;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button span {
+    position: absolute;
+    inset: 0;
+    background: #2c2c2c;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+button:hover span {
+    border: 2px solid #00ffe0;
+    box-shadow: 0 0 10px #00ffe0, 0 0 20px #00ffe0 inset;
+    background: #1e1e1e;
+}
+
+/* Estilos únicos por botón */
+button:nth-child(1) span {
+    background-color: #0f62fe;
+}
+button:nth-child(1):hover span {
+    box-shadow: 0 0 10px #0f62fe, 0 0 20px #0f62fe inset;
+    border-color: #0f62fe;
+}
+
+button:nth-child(2) span {
+    background-color: #00b894;
+}
+button:nth-child(2):hover span {
+    box-shadow: 0 0 10px #00b894, 0 0 20px #00b894 inset;
+    border-color: #00b894;
+}
+
+button:nth-child(3) span {
+    background-color: #d63031;
+}
+button:nth-child(3):hover span {
+    box-shadow: 0 0 10px #d63031, 0 0 20px #d63031 inset;
+    border-color: #d63031;
+}
+button:nth-child(4) span {
+    background-color: #3038d6;
+}
+button:nth-child(4):hover span {
+    box-shadow: 0 0 10px #4630d6, 0 0 20px #4130d6 inset;
+    border-color: #3054d6;
+}
+
+/* Responsive para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .botonesRedireccion {
+        flex-direction: column;
+        gap: 20px;
+        padding: 40px 20px;
+    }
+
+    button {
+        width: 90%;
+        max-width: 300px;
+        height: 70px;
+    }
+
+    button span {
+        font-size: 1.2rem;
+    }
+}
